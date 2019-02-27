@@ -6,9 +6,11 @@ services:
     image: ruby:2.6
     environment:
       - BUNDLE_APP_CONFIG=.bundle
+      - LC_ALL=ja_JP.UTF-8
+      - LANG=ja_JP.UTF-8
     volumes:
       - .:/opt/ghpages
     working_dir: /opt/ghpages
     ports:
-      - "4000:4000"
+      - "14000:4000"
     command: bundle exec jekyll serve -w --force_polling -H 0.0.0.0 -P 4000
