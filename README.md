@@ -1,15 +1,15 @@
-# banana-website
+# tailwind-css-tutorial
 
-## Setup
 
-```
-docker-compose run --rm ghpages bundle install
-```
+## 起動 & 自動ビルド(tailwind)
+`docker-compose up`
 
-## Run server
+HTMLやCSSにエラーがある場合はコンソールに表示される.
 
-```
-docker-compose up -d
-```
+## Prettier 実行
+`docker-compose run --rm tailwind npm run prettier`
 
-Open http://localhost:4000/
+## 動作確認
+`./build` ディレクトリをブラウザで直接開くか vscode の Live Server extension を利用して確認する.
+
+dockerにweb serverは含めていない.
